@@ -530,9 +530,9 @@
     #define X_MIN_PIN           3
     #define X_MAX_PIN           2
 
-    #define Y_STEP_PIN         60
-    #define Y_DIR_PIN          61
-    #define Y_ENABLE_PIN       56
+    #define Y_STEP_PIN         36//60
+    #define Y_DIR_PIN          34//61
+    #define Y_ENABLE_PIN       30//56
     #define Y_MIN_PIN          14
     #define Y_MAX_PIN          15
 
@@ -554,9 +554,9 @@
     #define E0_DIR_PIN         28
     #define E0_ENABLE_PIN      24
 
-    #define E1_STEP_PIN        36
-    #define E1_DIR_PIN         34
-    #define E1_ENABLE_PIN      30
+    #define E1_STEP_PIN        60//36
+    #define E1_DIR_PIN         61//34
+    #define E1_ENABLE_PIN      30//30
 
     #if MOTHERBOARD == 68
       #define E2_STEP_PIN        23
