@@ -49,7 +49,7 @@ AVR_TOOLS_PATH ?= /usr/bin/
 #Programmer configuration
 UPLOAD_RATE        ?= 115200
 AVRDUDE_PROGRAMMER ?= wiring
-UPLOAD_PORT        ?= /dev/arduino
+UPLOAD_PORT        ?= /dev/serial/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0
 
 #Directory used to build files in, contains all the build files, from object files to the final hex file.
 BUILD_DIR          ?= applet
