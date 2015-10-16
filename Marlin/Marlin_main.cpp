@@ -3500,7 +3500,7 @@ void manage_inactivity()
 
   if( (millis() - previous_millis_cmd) >  max_inactive_time )
     if(max_inactive_time)
-      kill();
+      poweroff();
   if(stepper_inactive_time)  {
     if( (millis() - previous_millis_cmd) >  stepper_inactive_time )
     {
@@ -3564,6 +3564,22 @@ void manage_inactivity()
       handle_status_leds();
   #endif
   check_axes_activity();
+}
+
+void poweroff()
+{
+  disable_heater();
+
+  disable_x();
+  disable_y();
+  disable_z();
+  disable_e0();
+  disable_e1();
+  disable_e2();
+
+#if defined(PS_ON_PIN) && PS_ON_PIN > -1
+  pinMode(PS_ON_PIN,INPUT);
+#endif
 }
 
 void kill()
