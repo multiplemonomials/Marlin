@@ -3493,6 +3493,22 @@ void handle_status_leds(void) {
 }
 #endif
 
+void poweroff()
+{
+  disable_heater();
+
+  disable_x();
+  disable_y();
+  disable_z();
+  disable_e0();
+  disable_e1();
+  disable_e2();
+
+#if defined(PS_ON_PIN) && PS_ON_PIN > -1
+  pinMode(PS_ON_PIN,INPUT);
+#endif
+}
+
 void manage_inactivity()
 {
   if(buflen < (BUFSIZE-1))
@@ -3564,22 +3580,6 @@ void manage_inactivity()
       handle_status_leds();
   #endif
   check_axes_activity();
-}
-
-void poweroff()
-{
-  disable_heater();
-
-  disable_x();
-  disable_y();
-  disable_z();
-  disable_e0();
-  disable_e1();
-  disable_e2();
-
-#if defined(PS_ON_PIN) && PS_ON_PIN > -1
-  pinMode(PS_ON_PIN,INPUT);
-#endif
 }
 
 void kill()
