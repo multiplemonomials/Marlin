@@ -645,7 +645,7 @@
     #if MOTHERBOARD == 77
       #define HEATER_BED_PIN     9    // BED
     #else
-      #define HEATER_BED_PIN     9    // BED
+      #define HEATER_BED_PIN     8    // BED
     #endif
   #endif
 
