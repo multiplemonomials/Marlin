@@ -134,7 +134,7 @@
 // 110 is Pt100 with 1k pullup (non standard)
 // 70 is 500C thermistor for Pico hot end
 
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 5
 #define TEMP_SENSOR_1 1
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_BED 1
@@ -177,7 +177,7 @@
 // Comment the following line to disable PID and enable bang-bang.
 #define PIDTEMP
 #define BANG_MAX 255 // limits current to nozzle while in bang-bang mode; 255=full current
-#define PID_MAX 128 // limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
+#define PID_MAX 225 // limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
 #ifdef PIDTEMP
   //#define PID_DEBUG // Sends debug data to the serial port.
   //#define PID_OPENLOOP 1 // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
@@ -188,10 +188,16 @@
   #define PID_dT ((OVERSAMPLENR * 8.0)/(F_CPU / 64.0 / 256.0)) //sampling period of the temperature routine
 
 // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
-// Ultimaker
-   #define  DEFAULT_Kp 17.86
-   #define  DEFAULT_Ki 1.54
-   #define  DEFAULT_Kd 51.79
+
+// E3D
+#define  DEFAULT_Kp 27.16
+#define  DEFAULT_Ki 2.16
+#define  DEFAULT_Kd 85.45
+
+// PrusaNozzle
+//   #define  DEFAULT_Kp 15.89
+//   #define  DEFAULT_Ki 1.21
+//   #define  DEFAULT_Kd 52.07
 
 // MakerGear
 //    #define  DEFAULT_Kp 7.0
