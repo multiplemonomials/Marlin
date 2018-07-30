@@ -2788,12 +2788,38 @@ DaveX plan for Teensylu/printrboard-type pinouts (ref teensylu & sprinter) for a
 #endif
 
 #ifdef DISABLE_MAX_ENDSTOPS
+#ifdef X_MAX_PIN
+#undef X_MAX_PIN
+#endif
+
+#ifdef Y_MAX_PIN
+#undef Y_MAX_PIN
+#endif
+
+#ifdef Z_MAX_PIN
+#undef Z_MAX_PIN
+#endif
+
+
 #define X_MAX_PIN          -1
 #define Y_MAX_PIN          -1
 #define Z_MAX_PIN          -1
 #endif
 
 #ifdef DISABLE_MIN_ENDSTOPS
+
+#ifdef X_MIN_PIN
+#undef X_MIN_PIN
+#endif
+
+#ifdef Y_MIN_PIN
+#undef Y_MIN_PIN
+#endif
+
+#ifdef Z_MIN_PIN
+#undef Z_MIN_PIN
+#endif
+
 #define X_MIN_PIN          -1
 #define Y_MIN_PIN          -1
 #define Z_MIN_PIN          -1
