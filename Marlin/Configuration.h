@@ -159,7 +159,7 @@
 // When temperature exceeds max temp, your heater will be switched off.
 // This feature exists to protect your hotend from overheating accidentally, but *NOT* from thermistor short/failure!
 // You should use MINTEMP for thermistor short/failure protection.
-#define HEATER_0_MAXTEMP 290
+#define HEATER_0_MAXTEMP 285
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define BED_MAXTEMP 150
@@ -194,9 +194,9 @@
 //    #define  DEFAULT_Kd 114
 
 // MakerGear
-   #define  DEFAULT_Kp 19.86
-   #define  DEFAULT_Ki 1.17
-   #define  DEFAULT_Kd 83.96
+//   #define  DEFAULT_Kp 19.86
+//   #define  DEFAULT_Ki 1.17
+//   #define  DEFAULT_Kd 83.96
    
 // E3D V6
    #define  DEFAULT_Kp 45.26
@@ -367,7 +367,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define max_software_endstops true  // If true, axis won't move to coordinates greater than the defined lengths below.
 
 // Travel limits after homing
-#define X_MAX_POS 210
+#define X_MAX_POS 234
 #define X_MIN_POS 0
 #define Y_MAX_POS 222
 #define Y_MIN_POS 0
@@ -485,7 +485,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {100.376, 200.753, 2267.507, 640}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {100.376, 200.753, 2267.507, 407.42}
 #define DEFAULT_MAX_FEEDRATE          {500, 500, 5, 25}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
